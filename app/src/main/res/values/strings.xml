@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloWorldApp</string>
+    <string name="app_button">Action!</string>
+    <string name="nyan_desc">NYAN FEVER!!!</string>
+</resources>
