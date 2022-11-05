@@ -3,6 +3,7 @@ package com.zebrano.helloworldapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -34,49 +35,59 @@ class MainActivity : AppCompatActivity() {
                 img.visibility = View.INVISIBLE
         }
 
-        showToast("onCreate()")
+        Log.d("HelloWorldAppLog", "OnCreate()!");
+
+        //showToast("onCreate()")
     }
 
     override fun onStart() {
         super.onStart()
 
-        showToast("onStart()")
+        Log.d("HelloWorldAppLog", "onStart()!");
+
+        //showToast("onStart()")
     }
 
     override fun onResume() {
         super.onResume()
 
-        showToast("onResume()")
+        Log.d("HelloWorldAppLog", "onResume()!");
+        //showToast("onResume()")
     }
 
     override fun onPause() {
         super.onPause()
 
-        showToast("onPause()")
+        Log.d("HelloWorldAppLog", "onPause()!");
+
+        //showToast("onPause()")
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        showToast("onRestart()")
+        Log.d("HelloWorldAppLog", "onRestart()!");
+
+        //showToast("onRestart()")
     }
 
     // Вызвать суперкласс после кода
     override fun onStop() {
-        showToast("onStop()")
-
+        //showToast("onStop()")
+        Log.d("HelloWorldAppLog", "onStop()!");
         super.onStop()
     }
+    
 
     override fun onDestroy() {
-        showToast("onDestroy()")
-
+        //showToast("onDestroy()")
+        Log.d("HelloWorldAppLog", "onDestroy()!");
         super.onDestroy()
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        showToast("onSaveInstanceState")
-
+        //showToast("onSaveInstanceState")
+        Log.d("HelloWorldAppLog", "onSaveInstanceState()!");
         super.onSaveInstanceState(outState, outPersistentState)
     }
 }
