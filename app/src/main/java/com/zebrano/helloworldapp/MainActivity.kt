@@ -29,15 +29,25 @@ class MainActivity : AppCompatActivity() {
         val img = findViewById<ImageView>(R.id.imageView23)
 
         btn.setOnClickListener {
-            if (img.visibility == View.INVISIBLE)
+            if (img.visibility == View.INVISIBLE){
                 img.visibility = View.VISIBLE
-            else
+                showToast("Nyan FEVER!!!")
+            } else {
                 img.visibility = View.INVISIBLE
+                showToast("Calm down...")
+            }
+
+            Log.d("HelloWorldAppLog", "Button pushed!")
+
         }
 
-        Log.d("HelloWorldAppLog", "OnCreate()!");
+        Log.d("HelloWorldAppLog", "OnCreate()!")
 
         //showToast("onCreate()")
+    }
+
+    fun tvClick(view : View){
+        Log.d("HelloWorldAppLog", "TextView pushed!")
     }
 
     override fun onStart() {
@@ -77,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("HelloWorldAppLog", "onStop()!");
         super.onStop()
     }
-    
+
 
     override fun onDestroy() {
         //showToast("onDestroy()")
