@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onDestroy()
     }
-    
+
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         showToast("onSaveInstanceState")
 
