@@ -2,4 +2,6 @@
     <string name="app_name">HelloWorldApp</string>
     <string name="app_button">Action!</string>
     <string name="nyan_desc">NYAN FEVER!!!</string>
+    <string name="calc_name">Simple notebook</string>
+    <string name="hint">Your text…</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.zebrano.helloworldapp
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
     // Функция показа тостов
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // запуск нового кода в добавление к существующему
         super.onCreate(savedInstanceState)
+
+        // AppCompatDelegate - содержит ссылки на методы системы
+        // Выключить ночной режим
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         // savedInstanceState - сохраненное состояние необходимых ресурсов
         setContentView(R.layout.activity_main) // выдвинуть активити на передний план
         val btn = findViewById<Button>(R.id.act)
@@ -30,9 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         btn.setOnClickListener {
             if (img.visibility == View.INVISIBLE){
+                btn.setBackgroundColor(Color.RED)
                 img.visibility = View.VISIBLE
                 showToast("Nyan FEVER!!!")
             } else {
+                btn.setBackgroundColor(Color.BLUE)
                 img.visibility = View.INVISIBLE
                 showToast("Calm down...")
             }
